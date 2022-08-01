@@ -15,6 +15,7 @@ const Form = () => {
       age,
       hairColor,
     });
+    // below resets state
     setFirstName("");
     setLastName("");
     setAge(0);
@@ -23,6 +24,7 @@ const Form = () => {
 
   return (
     <form onSubmit={submitHandler} className=" border ">
+      {/* onSubmit={submitHandler} connects to const submitHandler and activates */}
       <div className="form-group mb-3">
         <label>First Name:</label>
         {/* add synthetic event with anonymous function ()=>{} andThe Event Object e */}
@@ -30,6 +32,7 @@ const Form = () => {
         <input
           type="text"
           value={firstName}
+          //   value={prop} resets form to clear state
           onChange={(e) => {
             console.log("This is the event object: ", e);
             console.log("This is e.target: ", e.target);
